@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATE Bus Facility Form</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #ffffff;
+            padding: 30px 40px;
+            width: 100%;
+            max-width: 450px;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        input[type="text"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .radio-group {
+            margin-bottom: 18px;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+            display: inline-block;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .radio-group input {
+            margin-right: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        span {
+            font-size: 12pt;
+            font-weight: lighter;
+            color:rgb(255, 35, 35);
+            text-decoration: underline;
+            animation: change 5s linear infinite;
+        }
+        @keyframes change {
+            0%{
+                color:red;
+            }
+            25%{
+                color:orange;
+            }
+            50%{
+                color:yellow;
+            }75%{
+                color:green;
+            }
+            100%{
+                color:blue;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <form action="https://formspree.io/f/xkojjzoo" method="POST">
+
+            <h1>GATE Bus Facility Form</h1>
+            <div>
+                <p>(On Feb- 8 <sup>th</sup>), only for the route <span>Tirupathi ION Digitals</span></p>
+            </div>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="NAME" required>
+
+            <label for="roll">Roll Number</label>
+            <input type="text" id="roll" name="ROLL-NUMBER" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="PHONE-NUMBER" maxlength="10" required>
+
+            <!-- Branch Radio Buttons -->
+            <label>Branch</label>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="BRANCH" value="A" required> A
+                </label>
+                <label>
+                    <input type="radio" name="BRANCH" value="B"> B
+                </label>
+                <label>
+                    <input type="radio" name="BRANCH" value="C"> C
+                </label>
+                <label>
+                    <input type="radio" name="BRANCH" value="D"> D
+                </label>
+            </div>
+
+            <!-- Session Radio Buttons -->
+            <label>Session</label>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="SESSION" value="Forenoon" required> Forenoon
+                </label>
+                <label>
+                    <input type="radio" name="SESSION" value="Afternoon"> Afternoon
+                </label>
+            </div>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
